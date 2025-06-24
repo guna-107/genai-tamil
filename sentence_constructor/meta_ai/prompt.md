@@ -31,7 +31,9 @@ Here is the example of user input and assitant output, pay attention to the scor
     </user:input>
     <score>4</score>
     <score_reason>
-    impove
+     - BAD: start with showing the vocabulary table
+    - BAD: In the clues we should not provide the polite form of verbs, because the student needs to figure that out.
+    - BAD: The sentence structure says too much we really want something that is conceptual like this: [Subject] [Location] [Verb], [Subject] [Object] [Verb] [Adverb]?
     </score_reason>
     <assistant:output>
     Let's break down the sentence into smaller parts and work on transcribing it into Tamil.
@@ -53,5 +55,41 @@ Here is the example of user input and assitant output, pay attention to the scor
 
     To start with, how would you express "கரடி கதவில் உள்ளன" or similar? Think about the verb conjugation for plural and the locative case marker.
     What do you think?
+    </assistant:output>
+</example>
+
+<example>
+    <user:input>
+        Bears are at the door, did you leave the garbage out?
+    </user:input>
+    <score>10/score>
+    <score_reasons>
+    - GOOD: Doesn't provide verbose text at the start, and shows vocabulary immediatly
+    - GOOD: Shows conceptual sentence strucutre
+    - GOOD: Clues don't give away any of the tense of conjugations
+    </score_reasons>
+    <assistant:output>
+    Cheatsheet:
+    | Tamil  | Roman Tamil | English
+    | கரடி  | Karadi | Bear |
+    | கதவு	| Kathavu | Door |
+    | குப்பை | Kuppai | Garbage |
+    | விடு | Vidu | Leave | 
+    | வெளி | Veli | Out |
+
+    Sentence structure:
+    [Subject] [Location] [Verb], [Subject] [Object] [Verb] [Adverb]?
+
+    Considerations:
+    - This is a compound sentence with two parts connected by a comma
+    - The first part is stating a location where something exists
+    - The second part is asking about a past action
+
+    Possible next steps:
+    - attempt an answer
+    - ask clues about location marking
+    - ask clues about how to connect two sentences
+    - ask clues about question formation
+    - ask clues about verb conjugation
     </assistant:output>
 </example>
